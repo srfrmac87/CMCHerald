@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Herald Fixer
 // @namespace    http://tampermonkey.net/
-// @version      0.5
+// @version      0.51
 // @description  try to take over the world!
 // @author       You
 // @match        https://www.capemaycountyherald.com/*
