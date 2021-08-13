@@ -11,8 +11,8 @@
 // @grant        GM_deleteValue
 // @grant        GM_addStyle
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
-// @downloadURL  https://github.com/srfrmac87/CMCHerald/blob/main/CMCHerald-Paywall.js
-// @updateURL    https://github.com/srfrmac87/CMCHerald/blob/main/CMCHerald-Paywall.js
+// @downloadURL  https://github.com/srfrmac87/CMCHerald/raw/main/CMCHerald-Paywall.user.js
+// @updateURL    https://github.com/srfrmac87/CMCHerald/raw/main/CMCHerald-Paywall.user.js
 // ==/UserScript==
 
 (function() {
