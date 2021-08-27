@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Herald Fixer
 // @namespace    http://tampermonkey.net/
-// @version      0.51
+// @version      0.52
 // @description  try to take over the world!
 // @author       You
 // @match        https://www.capemaycountyherald.com/*
@@ -25,7 +25,7 @@
     //         setTimeout(Greasemonkey_main, 1500);
     //     }
 
-    var timerVar = setInterval (function() {Greasemonkey_main (); }, 250);
+    var timerVar = setInterval (function() {Greasemonkey_main (); }, 125);
     var trueA = false;
     var trueB = false;
     var trueC = false;
@@ -37,13 +37,18 @@
             trueA=true;
             //alert("A length = " + $('body.tp-modal-open').length);
         }
+        if($('#subscription-modal').length){
+            $('button.close').click();
+            trueB=true;
+            //alert("A length = " + $('body.tp-modal-open').length);
+        }
         $("body").removeClass("modal-open");
         $(".redacted-overlay").remove();
         $(".subscription-required").remove();
         $(".subscriber-only").removeClass("hide");
 
         counter++;
-        if(trueA==true){ // sets clearInterval for when it completes sucessfully
+        if(trueA==true && trueB==true){ // sets clearInterval for when it completes sucessfully
             clearInterval (timerVar);
             timerVar = "";
             //alert("complete, all true = " + counter);
@@ -63,24 +68,4 @@
 
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-    // Your code here...
-    //*[@id="block-1844597"]/div/div/div/button
-    ///html/body/div[2]/div/div[7]/section[2]/div[1]/div/div/div[1]/div/div/div/div/section/div/div/div/button
-
-    //Style fixer, not really necessary but just because:
-    //.tnc-overlay .promo-design button.close {
-    //color: #504e4e;
-    //}
 })();
