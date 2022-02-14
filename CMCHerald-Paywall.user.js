@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         AC Press and Herald Fixer
 // @namespace    http://tampermonkey.net/
-// @version      0.6
-// @description  Updated 12/14/21 for AC Press paywall
+// @version      0.6001
+// @description  Updated 2/14/22 for AC Press paywall
 // @author       You
 // @match        *.capemaycountyherald.com/*
 // @match        *capemaycountyherald.com/*
