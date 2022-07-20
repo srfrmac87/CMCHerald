@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         AC Press and Herald Fixer
 // @namespace    http://tampermonkey.net/
-// @version      0.6001
-// @description  Updated 2/14/22 for AC Press paywall
+// @version      0.607
+// @description  Updated 7/20/22 for Herald Paywall Update. ***AC Press is currently still broken***
 // @author       You
 // @match        *.capemaycountyherald.com/*
 // @match        *capemaycountyherald.com/*
@@ -38,7 +38,9 @@
                 trueB=true;
             }
             $("body").removeClass("modal-open"); // this makes the page scrollable *****always check this before removing*****
-            $("div#asset-content").css("display", "block"); // this unhides text in body of page // ****updated in .54 for problems found on 12/14/21****
+            //$("div#asset-content").css("display", "block"); // this unhides text in body of page // ****removed in version .607****
+            $("div.subscriber-only").css("display", "contents"); // this unhides text in body of page // ****updated in .6 for problems found on 7/20/22****
+            $("div#warning-body").css("display", "none"); // this hides text in body of page // ****updated in .54 for problems found on 3/30/22****
 
             counter++;
             if(trueA==true && trueB==true){ // sets clearInterval for when it completes sucessfully
@@ -103,6 +105,16 @@
         //}
         //
         //
+        //for cmc herald - adblock blocker (on spoutoff at least)
+        //} .wrapper.show {
+        //     display: none;
+        //}
+        //
+        //  ***and/or***
+        //
+        //div#warning-body {
+        //     display: none;
+        // }
 
 
     }
