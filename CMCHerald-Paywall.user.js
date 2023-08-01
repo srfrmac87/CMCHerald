@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         AC Press and Herald Fixer
 // @namespace    http://tampermonkey.net/
-// @version      0.6080001
-// @description  Updated 7/22/22 for Herald Paywall Update. ***AC Press is currently still broken***
+// @version      0.61
+// @description  Updated 8/1/23 for Herald website redo. ***AC Press is currently still broken***
 // @author       You
 // @match        *.capemaycountyherald.com/*
 // @match        *capemaycountyherald.com/*
@@ -29,19 +29,21 @@
 
     function Greasemonkey_main () {
         if(location.hostname.match('capemaycountyherald')){
-            if($('div#access-offers-modal').length){
-                $('div#access-offers-modal').css("display", "none"); // this removes paywall box ****updated in .54 for problems found on 12/14/21****
+            if($('div.tp-modal').length){
+                $('div.tp-modal').css("display", "none"); // this removes paywall box ****updated in .61 for new website on 8/1/23****
                 trueA=true;
-            }
-            if($('div.modal-backdrop.fade.in').length){
-                $('div.modal-backdrop.fade.in').css("display", "none"); // this removes transparency overlay ****updated in .54 for problems found on 12/14/21****
+            } document.querySelector("body > div.tp-backdrop.tp-active")
+            if($('div.tp-backdrop.tp-active').length){
+                $('div.tp-backdrop.tp-active').css("display", "none"); // this removes transparency overlay ****updated in .61 for new website on 8/1/23****
                 trueB=true;
             }
-            $("body").removeClass("modal-open"); // this makes the page scrollable *****always check this before removing*****
-            //$("div#asset-content").css("display", "block"); // this unhides text in body of page // ****removed in version .607****
+            $("body").removeClass("tp-modal-open"); // *****always check this before removing***** ****updated in .61 for new website on 8/1/23****
+            
+            //$("div#asset-content").css("display", "block"); // this unhides text in body of page // ****removed in version .607****                                   ****unclear if these are necessary on new site as of 8/1/23****
             $("div.subscriber-only").css("display", "contents"); // this unhides text in body of page // ****updated in .6 for problems found on 7/20/22****
             $("div#warning-body").css("display", "none"); // this hides text in body of page // ****updated in .54 for problems found on 3/30/22****
             $("div#asset-content").removeAttr("hidden"); // updated for another element that hides stuff
+
 
             counter++;
             if(trueA==true && trueB==true){ // sets clearInterval for when it completes sucessfully
@@ -52,7 +54,7 @@
                 clearInterval (timerVar);
                 timerVar = "";
             }
-        } else if(location.hostname.match('pressofatlanticcity')){ // this is for AC Press ****updated 2/14/22****
+        } else if(location.hostname.match('pressofatlanticcity')){ // this is for AC Press ****updated 2/14/22**** ****This remains broken 8/1/23****
             if($('.modal-backdrop.in').length){
                 $('.modal-backdrop.in').css("display", "none");
                 trueA=true;
