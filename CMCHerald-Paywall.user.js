@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AC Press and Herald Fixer
 // @namespace    http://tampermonkey.net/
-// @version      0.61
+// @version      0.7.0.0
 // @description  Updated 8/1/23 for Herald website redo. ***AC Press is currently still broken***
 // @author       You
 // @match        *.capemaycountyherald.com/*
