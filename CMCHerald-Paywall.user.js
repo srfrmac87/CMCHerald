@@ -7,7 +7,6 @@
 // @match        *.capemaycountyherald.com/*
 // @match        *capemaycountyherald.com/*
 // @icon         https://www.google.com/s2/favicons?domain=capemaycountyherald.com
-// @grant        GM_addStyle
 // @downloadURL  https://github.com/srfrmac87/CMCHerald/raw/main/CMCHerald-Paywall.user.js
 // @updateURL    https://github.com/srfrmac87/CMCHerald/raw/main/CMCHerald-Paywall.user.js
 // ==/UserScript==
