@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CMC Herald Paywall Remover
 // @namespace    http://tampermonkey.net/
-// @version      1.0.0.2
+// @version      1.0.1
 // @description  Updated 8/6/24 for fixing Herald paywall and removing AC Press paywall
 // @author       You
 // @match        *.capemaycountyherald.com/*
