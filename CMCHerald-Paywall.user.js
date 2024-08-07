@@ -1,6 +1,5 @@
 // ==UserScript==
 // @name         CMC Herald Paywall Remover
-// @namespace    http://tampermonkey.net/
 // @version      1.0.3
 // @description  Updated 8/6/24 for fixing Herald paywall and removing AC Press paywall
 // @author       You
@@ -46,4 +45,5 @@
             alert("This should never appear. If it does, tell Kyle.");
         }
      }
-})();
+}
+)();
